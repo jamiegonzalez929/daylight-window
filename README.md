@@ -2,6 +2,8 @@
 
 Daylight Window is a small browser-based solar planner that shows how sunrise, sunset, and total daylight shift through the year for a chosen location.
 
+Live demo: https://jamiegonzalez929.github.io/daylight-window/
+
 ## Why it exists
 
 I wanted a quick way to compare annual daylight patterns across places without relying on an API, a weather service, or a heavyweight mapping stack. This project keeps the problem tight: given latitude, longitude, a timezone, and a date, it computes a useful local daylight view entirely in the browser.
