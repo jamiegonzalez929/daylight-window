@@ -1,0 +1,11 @@
+{
+  "name": "daylight-window",
+  "summary": "A small static browser app that calculates sunrise, sunset, solar noon, and annual daylight duration for any latitude and longitude using local NOAA-style formulas. It is designed as a lightweight planning and comparison tool that runs entirely on GitHub Pages or a local static server without third-party APIs.",
+  "category": "data-viz",
+  "tech_stack": ["HTML", "CSS", "JavaScript", "Node.js test runner", "Python http.server"],
+  "test_commands": ["npm test"],
+  "run_commands": ["npm start"],
+  "github_repo": "jamiegonzalez929/daylight-window",
+  "github_url": "https://github.com/jamiegonzalez929/daylight-window",
+  "pages_url": ""
+}

@@ -1,0 +1,218 @@
+:root {
+  --bg: #f4efe4;
+  --panel: rgba(254, 251, 245, 0.8);
+  --ink: #15261d;
+  --muted: #506056;
+  --accent: #d96c3f;
+  --accent-soft: #f1bb83;
+  --line: #1d4b3a;
+  --grid: rgba(21, 38, 29, 0.14);
+  --shadow: 0 24px 60px rgba(38, 47, 37, 0.12);
+  --radius: 24px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--ink);
+  font-family: "Avenir Next", "Segoe UI", sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(241, 187, 131, 0.55), transparent 35%),
+    linear-gradient(180deg, #f9f4ea 0%, #f0e4cf 100%);
+}
+
+.shell {
+  width: min(1120px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: 2rem 0 3rem;
+}
+
+.hero,
+.controls,
+.dashboard,
+.viz {
+  background: var(--panel);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.hero {
+  padding: 2.5rem;
+}
+
+.eyebrow,
+h1,
+h2,
+.card h3 {
+  font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+}
+
+.eyebrow {
+  margin: 0 0 0.5rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-size: 0.8rem;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  line-height: 0.95;
+  max-width: 12ch;
+}
+
+.lede {
+  max-width: 60ch;
+  margin: 1rem 0 0;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+.controls {
+  margin-top: 1.2rem;
+  padding: 1.2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.9rem;
+}
+
+.controls label {
+  display: grid;
+  gap: 0.4rem;
+  font-size: 0.92rem;
+  color: var(--muted);
+}
+
+.controls input,
+.controls select {
+  width: 100%;
+  border-radius: 14px;
+  border: 1px solid rgba(29, 75, 58, 0.18);
+  background: rgba(255, 255, 255, 0.92);
+  padding: 0.85rem 0.9rem;
+  font: inherit;
+  color: var(--ink);
+}
+
+.dashboard {
+  margin-top: 1.2rem;
+  padding: 1.2rem;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.9rem;
+}
+
+.card {
+  padding: 1rem;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.82);
+}
+
+.card h3 {
+  margin: 0 0 0.7rem;
+  font-size: 1rem;
+}
+
+.card strong {
+  display: block;
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.card p,
+.notes,
+.viz-header p {
+  color: var(--muted);
+}
+
+.notes {
+  margin: 1rem 0 0;
+}
+
+.viz {
+  margin-top: 1.2rem;
+  padding: 1.2rem;
+}
+
+.viz-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: baseline;
+}
+
+.viz-header h2 {
+  margin: 0;
+}
+
+#chart {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-top: 1rem;
+}
+
+.chart-bg {
+  fill: rgba(255, 255, 255, 0.75);
+}
+
+.grid line {
+  stroke: var(--grid);
+  stroke-width: 1;
+}
+
+.grid text {
+  fill: var(--muted);
+  font-size: 12px;
+}
+
+.area {
+  fill: rgba(217, 108, 63, 0.18);
+}
+
+.line {
+  fill: none;
+  stroke: var(--line);
+  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.selected-line {
+  stroke: var(--accent);
+  stroke-width: 2;
+  stroke-dasharray: 5 6;
+}
+
+.selected-dot {
+  fill: var(--accent);
+}
+
+@media (max-width: 720px) {
+  .shell {
+    width: min(100% - 1rem, 1120px);
+    padding-top: 1rem;
+  }
+
+  .hero,
+  .controls,
+  .dashboard,
+  .viz {
+    border-radius: 20px;
+  }
+
+  .viz-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
